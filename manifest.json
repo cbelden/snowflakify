@@ -1,0 +1,30 @@
+{
+    "name": "Snowflakify",
+    "version": "0.0.3",
+    "manifest_version": 2,
+    "description": "Turns every web page into a winter wonderland.",
+    "content_scripts": [{
+        "matches": ["https://www.google.com/*",
+                    "https://adage-challenge.adagetechnologies.com/*"],
+        "css": ["content/snowflakify.css"],
+        "js": ["lib/lodash.js", "lib/snowflakify.js", "content/content.js"]
+    }],
+    "permissions": [
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": "images/snowflake.png",
+        "default_title": "Snowflakify"
+    },
+    "web_accessible_resources": [
+        "images/snowflake.png"
+    ],
+    "background": {
+        "scripts": ["background/background.js"],
+        "persistent": true
+    },
+    "icons": {
+        "128": "images/snowflake.png"
+    },
+    "options_page": "options/options.html"
+}

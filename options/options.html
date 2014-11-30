@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snowflakify</title>
+    <link rel="stylesheet" type="text/css" href="options.css">
+    <link rel="stylesheet" type="text/css" href="../content/snowflakify.css">
+    <script type="text/javascript" src="../lib/lodash.js" ></script>
+    <script type="text/javascript" src="../lib/snowflakify.js" ></script>
+    <script type="text/javascript" src="../content/content.js" ></script>
+</head>
+<body>
+    <div class="main-content">
+        <h3 class='title'>Snowflakify Settings</h1>
+        <div>
+            <div class="row">
+                <span>Density</span>
+                <input class="slider" id="density" type="range"></input>
+            </div>
+            
+            <div class="row">
+                <span>Speed</span>
+                <input class="slider" id="speed" type="range"></input>
+            </div>
+            
+            <div class="row">
+                <span>Rotation</span>
+                <input class="slider" id="rotation" type="range"></input>
+            </div>
+            
+            <div class="row">
+                <span>Opacity</span>
+                <input class="slider" id="opacity" type="range"></input>
+            </div>
+            
+            <div class="row">
+                <span>Image Url</span>
+                <input id="imageUrl" type="text"></input>
+            </div>
+
+            <div class="row">
+                <input type="button" class="button" id="save" value="Save" />
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="options.js"></script>
+</body>
+</html>
