@@ -1,6 +1,6 @@
 {
     "name": "Snowflakify",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "manifest_version": 2,
     "description": "Turns every web page into a winter wonderland.",
     "content_scripts": [{
