@@ -18,16 +18,18 @@ canvas {
     margin-bottom: 10px;
 }
 
+.imageUrl.row {
+    width: 345px;
+}
+
 input[type=range], input[type=text] {
     float: right;
     width: 130px;
 }
 .button {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    display: block;
-    width: 70px;
+    float: right;
+    width: 90px;
+    margin-left: 5px;
 }
 
 .button.dirty {
