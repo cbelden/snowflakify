@@ -55,6 +55,10 @@
 
         // Update the image url
         chrome.storage.local.set({'snowflakify-options': data}, function() { restartAnimation(data) });
+
+        // Update save button
+        saveImageBtn.className = "button";
+        saveImageBtn.value = "Saved!";
     }
 
     function initializeControls(options, defaults) {
