@@ -27,7 +27,7 @@
 
     // Start snowflakify animation
     Snowflakify.initialize({imageUrl: chrome.extension.getURL('images/snowflake.png')});
-    Snowflakify.startAnimation();
+    Snowflakify.start();
 
     function saveSliderSettings() {
         chrome.storage.local.get('snowflakify-options', updateSliderSettings);
@@ -97,7 +97,7 @@
         }
 
         // Finally, restart animation
-        Snowflakify.restartAnimation(data);
+        Snowflakify.restart(data);
     }
 
 })(Snowflakify, _, chrome);

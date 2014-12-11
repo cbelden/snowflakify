@@ -12,24 +12,10 @@
 
         // Start the snow storm!
         Snowflakify.initialize(options);
-        Snowflakify.startAnimation();
+        Snowflakify.start();
 
         // Listen to the navbar action
-        chrome.runtime.onMessage.addListener(toggleAnimation);
+        chrome.runtime.onMessage.addListener(function(request, sender) { Snowflakify.toggle(options); });
     }
 
-    function animate(t) {
-        Snowflakify.animate(t);
-        requestID = requestAnimationFrame(animate);
-    }
-
-    function toggleAnimation(request, sender) {
-        Snowflakify.toggleAnimation();
-    }
-
-    function stopAnimation() {
-        cancelAnimationFrame(Snowflakify.requestID);
-        Snowflakify.cancelAnimation();
-        Snowflakify.requestID = null;
-    }
 })(chrome, Snowflakify);
