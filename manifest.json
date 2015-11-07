@@ -1,13 +1,12 @@
 {
     "name": "Snowflakify",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "manifest_version": 2,
-    "description": "Turns every web page into a winter wonderland.",
+    "description": "Turns google into a winter wonderland.",
     "content_scripts": [{
-        "matches": ["https://www.google.com/*",
-                    "https://adage-challenge.adagetechnologies.com/*"],
-        "css": ["content/snowflakify.css"],
-        "js": ["lib/lodash.js", "lib/snowflakify.js", "content/content.js"]
+        "matches": ["https://www.google.com/*"],
+        "css": ["css/snowflakify.css"],
+        "js": ["./dist/index.js"]
     }],
     "permissions": [
         "storage"
@@ -20,11 +19,11 @@
         "images/snowflake.png"
     ],
     "background": {
-        "scripts": ["background/background.js"],
+        "page": "./background.html",
         "persistent": true
     },
     "icons": {
         "128": "images/snowflake.png"
     },
-    "options_page": "options/options.html"
+    "options_page": "./options.html"
 }

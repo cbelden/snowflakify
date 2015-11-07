@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 var THETA = 45;
 
 // Snowflake class
-export class Snowflake {
+class Snowflake {
   constructor(options) {
     options = options || {};
     this.x = options.x || 400;
@@ -79,6 +79,26 @@ export class Snowflake {
 
   magnitude(v) {
     return Math.sqrt(Math.pow(v[0], 2) + Math.pow(v[1], 2));
+  }
+}
+
+export class Snowflakify {
+  constructor(options) {
+    var opts = options || {};
+    this.noFlakes      = opts.density     || 40;
+    this.flakeSpeed    = opts.speed       || 50;
+    this.flakeRotation = opts.rotation    || 50;
+    this.opacity       = opts.opacity/100 || 1;
+
+    // Get canvas/context
+    this.canvas = this._getCanvas();
+    this.context = this.canvas.getContext('2d');
+    this.requestID = null;
+
+    // Create the snowflakes
+    this.flakes = this._createSnowflakes(opts, this.noFlakes);
+
+    return this;
   }
 
   toggle(options) {

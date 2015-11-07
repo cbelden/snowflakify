@@ -1,4 +1,4 @@
-import * as Snowflakify from './src/snowflakify';
+import { Snowflakify } from './src/snowflakify';
 
 
 let requestID = null;
@@ -15,9 +15,7 @@ function initializeContent(options){
     options.imageUrl = options.imageUrl || chrome.extension.getURL('images/snowflake.png');
 
     // Start the snow storm!
-    Snowflakify
-      .initialize(options)
-      .start();
+    new Snowflakify(options).start();
 
     // Listen to the navbar action
     chrome.runtime.onMessage.addListener(function(request, sender) { Snowflakify.toggle(options); });
