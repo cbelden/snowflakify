@@ -1,0 +1,29 @@
+{
+  "name": "snowflakify",
+  "version": "1.0.0",
+  "description": "Chrome extension for holiday funzies :)",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbelden/snowflakify.git"
+  },
+  "keywords": [
+    "snowflakes",
+    "chrome",
+    "extension",
+    "fun"
+  ],
+  "author": "calvin belden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbelden/snowflakify/issues"
+  },
+  "homepage": "https://github.com/cbelden/snowflakify#readme",
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "gulp": "^3.9.0"
+  }
+}
