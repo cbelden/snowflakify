@@ -1,8 +1,9 @@
 # Snowflakify
 
-## To install dependencies
+## Installation
 `npm install`
+
 `jspm install`
 
-## To build
+## Building
 `npm run build`
